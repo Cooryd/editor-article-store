@@ -4,7 +4,7 @@
 FROM node:lts-alpine as dev
 
 WORKDIR /app
-
+RUN apk add --no-cache python3 g++ make
 COPY  ./package.json \
       ./package-lock.json \
       ./tsconfig.json \

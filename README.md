@@ -7,11 +7,20 @@ Service for storing and managing articles.
 Getting up and running is rather straightforward, you just need to install the requried dependencies, compile the code 
 and then start it.
 
-On first run you'll need to initialize and update the git submodule which has some of the required `.sh` scripts used in thee `Makefile` as well as install the required npm packages
+On first run you'll need to initialize and update the git submodule which has some of the required `.sh` scripts used in the `Makefile` as well as install the required npm packages
 
 ```
 git submodule init
 git submodule update --recursive
+```
+
+**OSX users:** you will need access to `jq` and `timeout` to correctly run `make start_dev`, if you don't have these installed you can run 
+```
+brew install coreutils
+``` 
+and 
+```
+brew install jq
 ```
 
 Then to build and start the services just run:
